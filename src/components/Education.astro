@@ -1,0 +1,123 @@
+---
+// Education data - CUSTOMIZE THIS with your real education
+const education = [
+  {
+    degree: 'Master of Science in Computer Science',
+    institution: 'University of Technology',
+    period: '2017 - 2019',
+    description: 'Specialized in Software Engineering and Web Technologies. Graduated with honors. Thesis on "Modern Web Application Architecture and Performance Optimization".',
+    achievements: ['GPA: 3.8/4.0', 'Dean\'s List', 'Research Assistant']
+  },
+  {
+    degree: 'Bachelor of Science in Computer Science',
+    institution: 'Institute of Engineering',
+    period: '2014 - 2017',
+    description: 'Comprehensive study of computer science fundamentals including algorithms, data structures, databases, and software development.',
+    achievements: ['GPA: 3.6/4.0', 'Programming Club President', 'Hackathon Winner 2016']
+  },
+  {
+    degree: 'Professional Certifications',
+    institution: 'Various Online Platforms',
+    period: '2019 - Present',
+    description: 'Continuous learning through professional certifications and courses.',
+    achievements: [
+      'AWS Certified Developer',
+      'MongoDB Certified Developer',
+      'React Advanced Patterns',
+      'Node.js Microservices'
+    ]
+  }
+];
+---
+
+<section id="education" class="section bg-gray-800">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="animate-on-scroll">
+      <h2 class="section-title">
+        <span class="text-gradient">Education</span>
+      </h2>
+      <p class="section-subtitle">
+        My academic background and continuous learning journey
+      </p>
+    </div>
+
+    <!-- Education Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {education.map((edu) => (
+        <div class="card animate-on-scroll">
+          <!-- Header -->
+          <div class="mb-4">
+            <div class="flex items-start justify-between mb-2">
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-white mb-1">
+                  {edu.degree}
+                </h3>
+                <p class="text-primary-400 font-semibold">
+                  {edu.institution}
+                </p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">{edu.period}</span>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 mb-4 leading-relaxed text-sm">
+            {edu.description}
+          </p>
+
+          <!-- Achievements -->
+          <div class="space-y-2">
+            {edu.achievements.map((achievement) => (
+              <div class="flex items-start gap-2">
+                <svg
+                  class="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span class="text-gray-300 text-sm">{achievement}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Icon -->
+          <div class="mt-6 pt-6 border-t border-gray-700">
+            <svg
+              class="w-10 h-10 text-primary-600 opacity-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              />
+            </svg>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
