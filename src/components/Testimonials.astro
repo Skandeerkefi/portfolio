@@ -1,0 +1,104 @@
+---
+// Testimonials data - CUSTOMIZE THIS with real testimonials
+const testimonials = [
+  {
+    quote: "Skander is an exceptional developer who consistently delivers high-quality code. His expertise in JavaScript and modern frameworks is outstanding. He's a valuable team player who always goes the extra mile.",
+    name: 'Sarah Johnson',
+    role: 'Senior Project Manager',
+    company: 'Tech Innovations Inc.',
+    avatar: 'SJ'
+  },
+  {
+    quote: "Working with Skander was a pleasure. He has a deep understanding of fullstack development and excellent problem-solving skills. His ability to tackle complex challenges and deliver elegant solutions is impressive.",
+    name: 'Michael Chen',
+    role: 'CTO',
+    company: 'Digital Solutions Co.',
+    avatar: 'MC'
+  },
+  {
+    quote: "Skander's technical skills are matched by his communication abilities. He explains complex concepts clearly and collaborates effectively with both technical and non-technical team members. Highly recommended!",
+    name: 'Emily Rodriguez',
+    role: 'Lead Designer',
+    company: 'Creative Studio',
+    avatar: 'ER'
+  }
+];
+---
+
+<section id="testimonials" class="section bg-gray-800">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="animate-on-scroll">
+      <h2 class="section-title">
+        <span class="text-gradient">Testimonials</span>
+      </h2>
+      <p class="section-subtitle">
+        What colleagues and clients say about working with me
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial) => (
+        <div class="card animate-on-scroll flex flex-col">
+          <!-- Quote Icon -->
+          <div class="mb-4">
+            <svg
+              class="w-10 h-10 text-primary-600 opacity-50"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="text-gray-300 mb-6 flex-grow leading-relaxed italic">
+            "{testimonial.quote}"
+          </blockquote>
+
+          <!-- Author Info -->
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-700">
+            <!-- Avatar -->
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold text-lg">
+                {testimonial.avatar}
+              </span>
+            </div>
+
+            <!-- Details -->
+            <div>
+              <p class="font-bold text-white">
+                {testimonial.name}
+              </p>
+              <p class="text-sm text-gray-400">
+                {testimonial.role}
+              </p>
+              <p class="text-sm text-primary-400">
+                {testimonial.company}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Additional Recommendation -->
+    <div class="mt-16 text-center animate-on-scroll">
+      <p class="text-gray-400 mb-6">
+        Want to share your experience working with me?
+      </p>
+      <a
+        href="https://linkedin.com/in/skandeerkefi"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-secondary inline-flex items-center gap-2"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        Recommend on LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
