@@ -1,58 +1,54 @@
 ---
-// Experience data - CUSTOMIZE THIS with your real experience
 const experiences = [
   {
-    title: 'Senior Fullstack Developer',
-    company: 'Tech Innovations Inc.',
-    period: 'Jan 2023 - Present',
-    description: 'Led development of enterprise-level web applications using React, Node.js, and cloud services. Mentored junior developers and implemented best practices for scalable architecture.',
-    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'PostgreSQL', 'Docker']
+    title: 'Web Developer',
+    company: 'Bluebix Solutions',
+    period: 'Jul 2024 - Jan 2025',
+    description:
+      'Developed an enhanced admin panel for the Kick platform, managing off days, check-ins, and vacations. Reduced administrative processing time by 30% and improved platform efficiency by 25% for 100+ employees. Worked remotely using structured collaboration practices to ensure delivery and productivity.',
+    technologies: ['React', 'Node.js', 'Redux', 'Tailwind CSS', 'MongoDB', 'Jira'],
   },
   {
-    title: 'Fullstack JavaScript Developer',
-    company: 'Digital Solutions Co.',
-    period: 'Mar 2021 - Dec 2022',
-    description: 'Built and maintained multiple client-facing applications. Collaborated with cross-functional teams to deliver high-quality software solutions on time.',
-    technologies: ['Next.js', 'Express', 'MongoDB', 'Redis', 'GraphQL', 'Tailwind CSS']
+    title: 'Web Developer',
+    company: 'Université de Jendouba',
+    period: 'Jan 2024 - Jun 2024',
+    description:
+      'Developed a full-stack multi-vendor e-commerce application using the MERN stack. Integrated Cloudinary for image management, Stripe for payments, and Socket.io for real-time messaging. Improved UX with responsive design and performance optimizations.',
+    technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS', 'Stripe', 'Cloudinary', 'Socket.io'],
   },
   {
-    title: 'Frontend Developer',
-    company: 'StartUp Hub',
-    period: 'Jun 2019 - Feb 2021',
-    description: 'Developed responsive and performant user interfaces. Worked closely with designers to transform mockups into pixel-perfect implementations.',
-    technologies: ['Vue.js', 'JavaScript', 'SASS', 'Webpack', 'Jest', 'Cypress']
-  }
+    title: 'Web Developer',
+    company: 'ELYADATA',
+    period: 'Aug 2023 - Sep 2023',
+    description:
+      'Built a full-stack web application using Angular, Spring Boot, and PostgreSQL with Postman for API testing. Contributed to a CV generation tool for organizations, enhancing user experience. Implemented version control with Git and containerization with Docker for efficient project management.',
+    technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Postman', 'Git', 'Docker'],
+  },
 ];
 ---
 
 <section id="experience" class="section bg-gray-900">
   <div class="container-custom">
-    <!-- Section Header -->
     <div class="animate-on-scroll">
       <h2 class="section-title">
         <span class="text-gradient">Experience</span>
       </h2>
-      <p class="section-subtitle">
-        My professional journey in software development
-      </p>
+      <p class="section-subtitle">My professional journey in software development</p>
     </div>
 
-    <!-- Timeline -->
     <div class="relative">
-      <!-- Vertical Line -->
-      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-600 to-transparent"></div>
+      <div
+        class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-600 to-transparent"
+      />
 
-      <!-- Experience Items -->
       <div class="space-y-12">
         {experiences.map((exp, index) => (
           <div class={`animate-on-scroll relative ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
             <div class={`card ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
-              <!-- Timeline Dot -->
-              <div class="hidden md:block absolute top-8 w-4 h-4 bg-primary-600 rounded-full border-4 border-gray-900"
-                   style={`${index % 2 === 0 ? 'right: -2.5rem' : 'left: -2.5rem'}`}>
-              </div>
-
-              <!-- Content -->
+              <div
+                class="hidden md:block absolute top-8 w-4 h-4 bg-primary-600 rounded-full border-4 border-gray-900"
+                style={index % 2 === 0 ? 'right: -2.5rem' : 'left: -2.5rem'}
+              />
               <div class="mb-4">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                   <h3 class="text-2xl font-bold text-white">{exp.title}</h3>
@@ -61,11 +57,8 @@ const experiences = [
                 <p class="text-xl text-gray-300 font-medium">{exp.company}</p>
               </div>
 
-              <p class="text-gray-400 mb-4 leading-relaxed">
-                {exp.description}
-              </p>
+              <p class="text-gray-400 mb-4 leading-relaxed">{exp.description}</p>
 
-              <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
                   <span class="px-3 py-1 bg-gray-900 text-primary-400 rounded-full text-sm font-medium border border-gray-700">
