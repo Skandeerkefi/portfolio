@@ -19,63 +19,71 @@ const socialLinks = [
 ];
 ---
 
-<section id="home" class="min-h-screen flex items-center justify-center section pt-24">
+<section id="home" class="min-h-screen flex items-center section pt-24 bg-black">
   <div class="container-custom">
-    <div class="text-center animate-on-scroll">
-      <!-- Greeting -->
-      <p class="text-primary-400 text-lg md:text-xl mb-4 font-medium">
-        Hi there! 👋 I'm
-      </p>
-      
-      <!-- Name -->
-      <h1 class="text-5xl md:text-7xl font-bold mb-6">
-        <span class="text-gradient">Skander Kefi</span>
-      </h1>
-      
-      <!-- Title -->
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-gray-200">
-        Fullstack JavaScript Developer
-      </h2>
-      
-      <!-- Tagline/Bio -->
-      <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-        Passionate about building scalable web applications with modern technologies.
-        I transform ideas into elegant, user-friendly digital experiences.
-      </p>
-      
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="#projects" class="btn-primary">
-          View My Work
-        </a>
-        <a href="#contact" class="btn-secondary">
-          Get In Touch
-        </a>
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-8 animate-on-scroll">
+        <p class="inline-flex items-center px-4 py-2 rounded-full border border-gray-600 bg-black text-white text-sm md:text-base mb-6">
+          Fullstack JavaScript Developer
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-5 leading-tight">
+          Hi, I'm <span class="text-gradient">Skander Kefi</span>
+        </h1>
+
+        <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed">
+          I build fast, scalable web products with clean code, clear UX, and reliable backend architecture.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          {socialLinks.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-12 h-12 rounded-xl border border-gray-600 bg-black text-gray-200 hover:text-white hover:border-white transition-all duration-300 flex items-center justify-center"
+              aria-label={social.name}
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d={social.icon} />
+              </svg>
+            </a>
+          ))}
+        </div>
       </div>
-      
-      <!-- Social Links -->
-      <div class="flex justify-center gap-6">
-        {socialLinks.map((social) => (
-          <a
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-gray-400 hover:text-primary-400 transition-colors duration-300 transform hover:scale-110"
-            aria-label={social.name}
-          >
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d={social.icon} />
-            </svg>
-          </a>
-        ))}
+
+      <div class="lg:col-span-4 animate-on-scroll">
+        <div class="card p-8 space-y-6">
+          <div>
+            <p class="text-gray-200 text-sm uppercase tracking-widest mb-2">Focus</p>
+            <p class="text-white text-xl font-semibold">Modern Web Apps</p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-lg border border-gray-700 bg-black p-4">
+              <p class="text-2xl font-bold text-white">2+</p>
+              <p class="text-gray-200 text-sm">Years Building</p>
+            </div>
+            <div class="rounded-lg border border-gray-700 bg-black p-4">
+              <p class="text-2xl font-bold text-white">8+</p>
+              <p class="text-gray-200 text-sm">Live Projects</p>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            React, Next.js, Node.js, and Tailwind — delivered with performance and maintainability in mind.
+          </p>
+        </div>
       </div>
     </div>
-    
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+
+    <div class="mt-14 flex justify-center animate-bounce">
       <a href="#experience" aria-label="Scroll to experience section">
         <svg
-          class="w-6 h-6 text-primary-400"
+          class="w-6 h-6 text-gray-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -91,33 +99,3 @@ const socialLinks = [
     </div>
   </div>
 </section>
-
-<style>
-  /* Animated gradient background */
-  #home {
-    background: linear-gradient(135deg, #0c4a6e 0%, #1e293b 50%, #0c4a6e 100%);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-</style>

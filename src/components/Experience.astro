@@ -27,7 +27,7 @@ const experiences = [
 ];
 ---
 
-<section id="experience" class="section bg-gray-900">
+<section id="experience" class="section bg-black">
   <div class="container-custom">
     <div class="animate-on-scroll">
       <h2 class="section-title">
@@ -38,7 +38,7 @@ const experiences = [
 
     <div class="relative">
       <div
-        class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-600 to-transparent"
+        class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-gray-300 to-transparent"
       />
 
       <div class="space-y-12">
@@ -46,13 +46,13 @@ const experiences = [
           <div class={`animate-on-scroll relative ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
             <div class={`card ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
               <div
-                class="hidden md:block absolute top-8 w-4 h-4 bg-primary-600 rounded-full border-4 border-gray-900"
+                class="hidden md:block absolute top-8 w-4 h-4 bg-white rounded-full border-4 border-gray-900"
                 style={index % 2 === 0 ? 'right: -2.5rem' : 'left: -2.5rem'}
               />
               <div class="mb-4">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                   <h3 class="text-2xl font-bold text-white">{exp.title}</h3>
-                  <span class="text-primary-400 font-semibold">{exp.period}</span>
+                  <span class="text-gray-200 font-semibold">{exp.period}</span>
                 </div>
                 <p class="text-xl text-gray-300 font-medium">{exp.company}</p>
               </div>
@@ -61,7 +61,7 @@ const experiences = [
 
               <div class="flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
-                  <span class="px-3 py-1 bg-gray-900 text-primary-400 rounded-full text-sm font-medium border border-gray-700">
+                  <span class="px-3 py-1 bg-gray-900 text-gray-200 rounded-full text-sm font-medium border border-gray-700">
                     {tech}
                   </span>
                 ))}

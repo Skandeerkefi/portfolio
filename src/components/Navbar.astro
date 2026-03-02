@@ -10,7 +10,7 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-700">
   <div class="container-custom px-4 md:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo/Brand -->
@@ -23,7 +23,7 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="text-gray-300 hover:text-primary-400 transition-colors duration-300"
+            class="text-gray-300 hover:text-white transition-colors duration-300"
           >
             {item.label}
           </a>
@@ -63,12 +63,12 @@ const navItems = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
     <div class="px-4 py-4 space-y-3">
       {navItems.map((item) => (
         <a
           href={item.href}
-          class="block text-gray-300 hover:text-primary-400 transition-colors duration-300 py-2"
+          class="block text-gray-300 hover:text-white transition-colors duration-300 py-2"
         >
           {item.label}
         </a>
